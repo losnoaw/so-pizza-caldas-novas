@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff4500; /* Vermelho quase laranja */
+    padding: 10px;
+    color: white;
+}
+
+.redes-sociais {
+    color: #f2f2f2;
+}
+
+.redes-sociais a {
+    color: #f2f2f2;
+    text-decoration: none;
+    margin: 15px;
+}
+
+.redes-sociais a:last-child {
+    margin-right: 0; /* Remove o espaçamento à direita do último link */
+}
+
+.redes-sociais :hover {
+    color: rgb(20, 30, 177);
+}
+
+section {
+    padding: 20px;
+}
+
+/* Estilo base para todas as categorias */
+.categoria,
+img {
+    display: flex;
+    flex-wrap: wrap; /* Itens que não cabem na linha atual serão movidos para a próxima linha */
+    gap: 20px; /* Espaçamento entre os itens */
+    justify-content: center; /* Centraliza os itens dentro da categoria */
+}
+
+/* Estilo base para todos os itens */
+.categoria .item {
+    width: 200px; /* Largura fixa para cada item */
+    text-align: center; /* Centraliza o conteúdo de cada item */
+    margin-bottom: 20px; /* Espaçamento abaixo de cada item */
+    background-color: #f2f2f2; /* Cor de fundo (opcional) */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 10px; /* Espaçamento interno dos itens */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar um efeito de elevação */
+}
+
+/* Estilo para todas as imagens */
+.categoria .item img {
+    width: 150px; /* Largura fixa */
+    height: 150px; /* Altura fixa */
+    object-fit: cover; /* Garante que a imagem seja bem ajustada no container */
+    border-radius: 8px; /* Bordas arredondadas nas imagens */
+    display: block; /* Para que o margin auto funcione */
+    margin: 0 auto;
+}
+
+/* Estilo para os títulos dos itens */
+.categoria .item h4 {
+    color: #333; /* Cor do texto */
+    font-size: 18px; /* Tamanho da fonte */
+    margin-top: 10px;
+}
+
+/* Estilo para os botões */
+.categoria .item button {
+    background-color: #ff4500; /* Cor do botão (pode ajustar conforme o estilo da sua página) */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Efeito hover nos botões */
+.categoria .item button:hover {
+    background-color: #e03e00; /* Efeito ao passar o mouse */
+}
+
+#carrinho {
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #fff;
+}
+
+#whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+#whatsapp-btn img {
+    width: 50px;
+}
+
+button {
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff6347;
+}

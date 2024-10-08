@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Só Pizza Caldas Novas</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <!-- Topo com logo e redes sociais -->
+        <header>
+            <div class="logo">
+                <h1>Só Pizza Caldas Novas</h1>
+            </div>
+            <div class="redes-sociais">
+                <a href="https://wa.me/seu-numero-whatsapp">WhatsApp</a>
+                <a href="#link-do-instagram">Instagram</a>
+                <a href="#link-do-facebook">Facebook </a>
+            </div>
+        </header>
+        <!-- Seção de cardápio -->
+        <section id="cardapio">
+            <h2>Cardápio</h2>
+            <div class="categoria" id="pizzas">
+                <h3>Pizzas</h3>
+            </div>
+            <div class="categoria" id="refrigerantes">
+                <h3>Refrigerantes</h3>
+            </div>
+            <div class="categoria" id="sucos">
+                <h3>Sucos</h3>
+            </div>
+        </section>
+        <!-- Carrinho -->
+        <section id="carrinho">
+            <h2>Seu Carrinho</h2>
+            <ul id="itens-carrinho"></ul>
+            <p>Total: R$ <span id="total">0.00</span></p>
+            <button onclick="finalizarPedido()">
+                Finalizar Pedido via WhatsApp
+            </button>
+        </section>
+
+        <!-- Botão flutuante do WhatsApp -->
+        <a href="https://wa.me/seu-numero-whatsapp" id="whatsapp-btn"
+            ><img src="/img/icons/whatsapp2.png" alt="WhatsApp"
+        /></a>
+        <script src="script.js"></script>
+    </body>
+</html>
