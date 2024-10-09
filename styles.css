@@ -12,15 +12,8 @@ header {
     padding: 10px; /* Adiciona um pouco de padding */
     background-color: #ff4500; /* Cor de fundo */
     color: white; /* Cor do texto */
-}
-
-header h1 {
-    background-color: #5a2310; /* Cor de fundo dos botões */
-    color: white; /* Cor do texto */
-    padding: 10px 20px; /* Espaçamento interno dos botões */
-    text-decoration: none; /* Remove sublinhado */
-    border-radius: 5px; /* Bordas arredondadas */
-    margin: 0 10px;
+    width: 100%; /* Garante que o header ocupe 100% da largura */
+    box-sizing: border-box; /* Inclui padding e bordas na largura total */
 }
 
 .redes-sociais {
@@ -29,7 +22,7 @@ header h1 {
 }
 
 .redes-sociais a {
-    background-color: #5a2310; /* Cor de fundo dos botões */
+    background-color: #ff4500; /* Cor de fundo dos botões */
     color: white; /* Cor do texto */
     padding: 10px 20px; /* Espaçamento interno dos botões */
     text-decoration: none; /* Remove sublinhado */
