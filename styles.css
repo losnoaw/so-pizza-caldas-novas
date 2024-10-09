@@ -10,7 +10,7 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        /* text-align: center; */
+        text-align: center; /* Removi o comentário para centralizar o texto */
     }
 
     .redes-sociais {
@@ -27,17 +27,17 @@ body {
         padding: 10px;
     }
 
-    .categoria,
-    img {
-        flex-direction: column;
-        align-items: center;
+    .categoria {
+        display: flex;
+        flex-wrap: wrap; /* Permite a quebra de linha */
+        justify-content: space-between;
     }
 
     .categoria .item {
-        width: 45%; /* Ajusta a largura dos itens */
+        width: 45%; /* Ajusta a largura dos itens para caber dois por linha */
         margin-left: 0;
         margin-bottom: 10px;
-        text-align: ;
+        text-align: center;
     }
 
     .categoria .item img {
@@ -82,8 +82,7 @@ section {
 }
 
 /* Estilo base para todas as categorias */
-.categoria,
-img {
+.categoria {
     display: flex;
     flex-wrap: wrap; /* Itens que não cabem na linha atual serão movidos para a próxima linha */
     gap: 20px; /* Espaçamento entre os itens */
