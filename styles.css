@@ -27,26 +27,42 @@ body {
         padding: 10px;
     }
 
-    /* Estilos para telas maiores (desktop) */
-    .categoria .item {
-        display: block;
-        margin-left: 20px;
-        width: 200px; /* Largura fixa para cada item no desktop */
-        text-align: center; /* Centraliza o conteúdo de cada item */
-        margin-bottom: 20px; /* Espaçamento abaixo de cada item */
-        background-color: #f2f2f2; /* Cor de fundo */
-        border-radius: 8px; /* Bordas arredondadas */
-        padding: 10px; /* Espaçamento interno dos itens */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar um efeito de elevação */
+    /* Estilos para dispositivos móveis */
+    @media (max-width: 768px) {
+        .categoria {
+            display: flex;
+            flex-wrap: wrap; /* Permite quebra de linha */
+            justify-content: space-between;
+        }
+
+        .categoria .item {
+            flex: 1 1 calc(20% - 10px); /* Ajusta a largura dos itens para 20% menos a margem */
+            margin: 5px; /* Espaçamento entre os itens */
+            max-width: calc(
+                20% - 10px
+            ); /* Garante que os itens não excedam 20% menos a margem */
+            box-sizing: border-box; /* Inclui padding e bordas na largura total */
+        }
+
+        .categoria .item img {
+            width: 10vw; /* Usa 20% da largura da viewport */
+            height: auto; /* Mantém a proporção da imagem */
+            object-fit: cover; /* Garante que a imagem seja bem ajustada no container */
+        }
     }
 
-    .categoria .item img {
-        width: 150px; /* Largura fixa no desktop */
-        height: 150px; /* Altura fixa no desktop */
-        object-fit: cover; /* Garante que a imagem seja bem ajustada no container */
-        border-radius: 8px; /* Bordas arredondadas nas imagens */
-        display: block; /* Para que o margin auto funcione */
-        margin: 0 auto;
+    /* Estilos para telas menores */
+    @media (max-width: 480px) {
+        .categoria .item {
+            flex: 1 1 calc(33.33% - 10px); /* Ajusta a largura dos itens para 33.33% menos a margem */
+            max-width: calc(
+                33.33% - 10px
+            ); /* Garante que os itens não excedam 33.33% menos a margem */
+        }
+
+        .categoria .item img {
+            width: 20vw; /* Usa 30% da largura da viewport */
+        }
     }
 
     /* Estilos para dispositivos móveis */
