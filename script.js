@@ -151,7 +151,7 @@ function finalizarPedido() {
         mensagem += `- ${item.nome}: R$ ${item.preco.toFixed(2)}\n`;
     });
     mensagem += `Total: R$ ${total.toFixed(2)}`;
-    const linkWhatsApp = `https://wa.me/seu-numero-whatsapp?text=${encodeURIComponent(
+    const linkWhatsApp = `https://wa.me/5564992303504?text=${encodeURIComponent(
         mensagem
     )}`;
     window.open(linkWhatsApp, "_blank");
