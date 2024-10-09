@@ -10,7 +10,7 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        text-align: center; /* Removi o comentário para centralizar o texto */
+        text-align: center;
     }
 
     .redes-sociais {
@@ -29,20 +29,20 @@ body {
 
     .categoria {
         display: flex;
-        flex-wrap: wrap; /* Permite a quebra de linha */
+        flex-wrap: wrap;
         justify-content: space-between;
     }
 
     .categoria .item {
-        width: 45%; /* Ajusta a largura dos itens para caber dois por linha */
+        width: 45%;
         margin-left: 0;
         margin-bottom: 10px;
         text-align: center;
     }
 
     .categoria .item img {
-        width: 100%; /* Ajusta a largura da imagem para caber no container */
-        height: auto; /* Mantém a proporção da imagem */
+        width: 100%;
+        height: auto;
     }
 
     #whatsapp-btn img {
@@ -54,7 +54,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #ff4500; /* Vermelho quase laranja */
+    background-color: #ff4500;
     padding: 10px;
     color: white;
 }
@@ -70,7 +70,7 @@ header {
 }
 
 .redes-sociais a:last-child {
-    margin-right: 0; /* Remove o espaçamento à direita do último link */
+    margin-right: 0;
 }
 
 .redes-sociais a:hover {
@@ -84,44 +84,44 @@ section {
 /* Estilo base para todas as categorias */
 .categoria {
     display: flex;
-    flex-wrap: wrap; /* Itens que não cabem na linha atual serão movidos para a próxima linha */
-    gap: 20px; /* Espaçamento entre os itens */
-    justify-content: center; /* Centraliza os itens dentro da categoria */
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
 /* Estilo base para todos os itens */
 .categoria .item {
     display: block;
     margin-left: 20px;
-    width: 200px; /* Largura fixa para cada item */
-    text-align: center; /* Centraliza o conteúdo de cada item */
-    margin-bottom: 20px; /* Espaçamento abaixo de cada item */
-    background-color: #f2f2f2; /* Cor de fundo (opcional) */
-    border-radius: 8px; /* Bordas arredondadas */
-    padding: 10px; /* Espaçamento interno dos itens */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar um efeito de elevação */
+    width: 200px;
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Estilo para todas as imagens */
 .categoria .item img {
-    width: 150px; /* Largura fixa */
-    height: 150px; /* Altura fixa */
-    object-fit: cover; /* Garante que a imagem seja bem ajustada no container */
-    border-radius: 8px; /* Bordas arredondadas nas imagens */
-    display: block; /* Para que o margin auto funcione */
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
     margin: 0 auto;
 }
 
 /* Estilo para os títulos dos itens */
 .categoria .item h4 {
-    color: #333; /* Cor do texto */
-    font-size: 18px; /* Tamanho da fonte */
+    color: #333;
+    font-size: 18px;
     margin-top: 10px;
 }
 
 /* Estilo para os botões */
 .categoria .item button {
-    background-color: #ff4500; /* Cor do botão (pode ajustar conforme o estilo da sua página) */
+    background-color: #ff4500;
     color: white;
     border: none;
     padding: 8px 12px;
@@ -132,7 +132,7 @@ section {
 
 /* Efeito hover nos botões */
 .categoria .item button:hover {
-    background-color: #e03e00; /* Efeito ao passar o mouse */
+    background-color: #e03e00;
 }
 
 #carrinho {
@@ -182,7 +182,7 @@ button:hover {
     cursor: pointer;
     border-radius: 0 5px 5px 0;
     padding: 10px 20px;
-    z-index: 1002; /* Garante que o botão fique acima de outros elementos */
+    z-index: 1002;
 }
 
 #toggle-carrinho-lateral:hover {

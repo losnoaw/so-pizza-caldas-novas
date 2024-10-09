@@ -144,24 +144,7 @@ function atualizarCarrinho() {
     document.getElementById("total").textContent = total.toFixed(2);
 }
 
-//para ocultar e visualizar o carrinho
-/* document
-    .getElementById("toggle-carrinho")
-    .addEventListener("click", function () {
-        const carrinho = document.getElementById("carrinho");
-        const carrinhoVisivel =
-            carrinho.style.display === "block" || carrinho.style.display === "";
-        const toggleBotao = document.getElementById("toggle-carrinho");
-
-        if (carrinhoVisivel) {
-            carrinho.style.display = "none";
-            toggleBotao.textContent = "Mostrar Carrinho";
-        } else {
-            carrinho.style.display = "block";
-            toggleBotao.textContent = "Ocultar Carrinho";
-        }
-    });
- */
+//botão lateral para ocultar e visualizar carrinho
 document
     .getElementById("toggle-carrinho-lateral")
     .addEventListener("click", function () {
