@@ -110,7 +110,6 @@ function carregarCardapio() {
     adicionarItens("sucos", itensCardapio.sucos);
 }
 
-// Carrinho e controle de pedido
 let carrinho = [];
 let total = 0;
 
@@ -119,6 +118,7 @@ function adicionarAoCarrinho(nome, preco) {
     carrinho.push({ nome, preco });
     total += preco;
     atualizarCarrinho();
+    atualizarContador();
 }
 
 // Remover item do carrinho
@@ -126,6 +126,7 @@ function removerDoCarrinho(index) {
     total -= carrinho[index].preco;
     carrinho.splice(index, 1);
     atualizarCarrinho();
+    atualizarContador();
 }
 
 // Atualizar exibição do carrinho
@@ -143,6 +144,48 @@ function atualizarCarrinho() {
     });
     document.getElementById("total").textContent = total.toFixed(2);
 }
+
+// Atualizar contador de itens
+function atualizarContador() {
+    const itemCount = carrinho.length;
+    document.getElementById("item-count").textContent = itemCount;
+}
+
+// Alternar visibilidade do carrinho
+document
+    .getElementById("toggle-carrinho-lateral")
+    .addEventListener("click", function () {
+        const carrinho = document.getElementById("carrinho");
+        if (
+            carrinho.style.display === "none" ||
+            carrinho.style.display === ""
+        ) {
+            carrinho.style.display = "block";
+        } else {
+            carrinho.style.display = "none";
+        }
+    });
+
+// Atualizar contador de itens
+function atualizarContador() {
+    const itemCount = carrinho.length;
+    document.getElementById("item-count").textContent = itemCount;
+}
+
+// Alternar visibilidade do carrinho
+document
+    .getElementById("toggle-carrinho-lateral")
+    .addEventListener("click", function () {
+        const carrinho = document.getElementById("carrinho");
+        if (
+            carrinho.style.display === "none" ||
+            carrinho.style.display === ""
+        ) {
+            carrinho.style.display = "block";
+        } else {
+            carrinho.style.display = "none";
+        }
+    });
 
 //botão lateral para ocultar e visualizar carrinho
 document

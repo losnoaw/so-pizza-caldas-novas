@@ -5,28 +5,28 @@ body {
     padding: 0;
 }
 
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.redes-sociais {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.redes-sociais a {
+    margin: 10px 0;
+}
+
+section {
+    padding: 10px;
+}
+
 @media (max-width: 768px) {
-    header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .redes-sociais {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .redes-sociais a {
-        margin: 10px 0;
-    }
-
-    section {
-        padding: 10px;
-    }
-
     .categoria {
         display: flex;
         flex-wrap: wrap;
@@ -44,10 +44,10 @@ body {
         width: 100%;
         height: auto;
     }
+}
 
-    #whatsapp-btn img {
-        width: 40px;
-    }
+#whatsapp-btn img {
+    width: 40px;
 }
 
 header {
@@ -136,6 +136,7 @@ section {
 }
 
 #carrinho {
+    display: none;
     border: 1px solid #ccc;
     padding: 20px;
     background-color: #fff;
@@ -183,6 +184,22 @@ button:hover {
     border-radius: 0 5px 5px 0;
     padding: 10px 20px;
     z-index: 1002;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#toggle-carrinho-lateral svg {
+    margin-right: 10px;
+}
+
+#item-count {
+    background-color: #ff0000;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    margin-left: 5px;
 }
 
 #toggle-carrinho-lateral:hover {
@@ -198,4 +215,24 @@ button:hover {
     cursor: pointer;
     border-radius: 5px;
     width: 100%;
+}
+
+#itens-carrinho {
+    list-style-type: none; /* Remove os pontos da lista */
+    padding: 0; /* Remove o espaçamento à esquerda */
+}
+
+#itens-carrinho button {
+    background-color: #ff4500; /* Cor de fundo */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 12px; /* Borda arredondada */
+    margin-left: 10px; /* Espaçamento entre o texto e o botão */
+    margin-bottom: 10px;
+}
+
+#itens-carrinho button:hover {
+    background-color: #e03e00; /* Cor ao passar o mouse */
 }
