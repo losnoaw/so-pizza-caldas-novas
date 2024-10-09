@@ -28,27 +28,25 @@ body {
     }
 
     /* Estilos para telas maiores (desktop) */
-    @media (max-width: 768px) {
-        .categoria .item {
-            display: block;
-            margin-left: 20px;
-            width: 200px; /* Largura fixa para cada item no desktop */
-            text-align: center; /* Centraliza o conteúdo de cada item */
-            margin-bottom: 20px; /* Espaçamento abaixo de cada item */
-            background-color: #f2f2f2; /* Cor de fundo */
-            border-radius: 8px; /* Bordas arredondadas */
-            padding: 10px; /* Espaçamento interno dos itens */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar um efeito de elevação */
-        }
+    .categoria .item {
+        display: block;
+        margin-left: 20px;
+        width: 200px; /* Largura fixa para cada item no desktop */
+        text-align: center; /* Centraliza o conteúdo de cada item */
+        margin-bottom: 20px; /* Espaçamento abaixo de cada item */
+        background-color: #f2f2f2; /* Cor de fundo */
+        border-radius: 8px; /* Bordas arredondadas */
+        padding: 10px; /* Espaçamento interno dos itens */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar um efeito de elevação */
+    }
 
-        .categoria .item img {
-            width: 150px; /* Largura fixa no desktop */
-            height: 150px; /* Altura fixa no desktop */
-            object-fit: cover; /* Garante que a imagem seja bem ajustada no container */
-            border-radius: 8px; /* Bordas arredondadas nas imagens */
-            display: block; /* Para que o margin auto funcione */
-            margin: 0 auto;
-        }
+    .categoria .item img {
+        width: 150px; /* Largura fixa no desktop */
+        height: 150px; /* Altura fixa no desktop */
+        object-fit: cover; /* Garante que a imagem seja bem ajustada no container */
+        border-radius: 8px; /* Bordas arredondadas nas imagens */
+        display: block; /* Para que o margin auto funcione */
+        margin: 0 auto;
     }
 
     /* Estilos para dispositivos móveis */
