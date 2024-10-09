@@ -108,24 +108,6 @@ header {
     color: white;
 }
 
-.redes-sociais {
-    color: #f2f2f2;
-}
-
-.redes-sociais a {
-    color: #f2f2f2;
-    text-decoration: none;
-    margin: 15px;
-}
-
-.redes-sociais a:last-child {
-    margin-right: 0;
-}
-
-.redes-sociais a:hover {
-    color: rgb(20, 30, 177);
-}
-
 section {
     padding: 20px;
 }
