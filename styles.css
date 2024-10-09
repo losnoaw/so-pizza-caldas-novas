@@ -27,29 +27,7 @@ body {
         padding: 10px;
     }
 
-    /* Estilos para dispositivos móveis */
-    @media (max-width: 768px) {
-        .categoria {
-            display: flex;
-            flex-wrap: wrap; /* Permite quebra de linha */
-            justify-content: space-between;
-        }
-
-        .categoria .item {
-            flex: 1 1 calc(10% - 10px); /* Ajusta a largura dos itens para 20% menos a margem */
-            margin: 5px; /* Espaçamento entre os itens */
-            max-width: calc(
-                20% - 10px
-            ); /* Garante que os itens não excedam 20% menos a margem */
-            box-sizing: border-box; /* Inclui padding e bordas na largura total */
-        }
-
-        .categoria .item img {
-            width: 100%; /* Ajusta a largura da imagem para caber no container */
-            height: auto; /* Mantém a proporção da imagem */
-            object-fit: cover; /* Garante que a imagem seja bem ajustada no container */
-        }
-    }
+    /* Estilos para telas maiores (desktop) */
     @media (max-width: 768px) {
         .categoria .item {
             display: block;
