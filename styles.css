@@ -5,49 +5,74 @@ body {
     padding: 0;
 }
 
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.redes-sociais {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.redes-sociais a {
-    margin: 10px 0;
-}
-
-section {
-    padding: 10px;
-}
-
 @media (max-width: 768px) {
-    .categoria {
+    header {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-
-    .categoria .item {
-        width: 45%;
-        margin-left: 0;
-        margin-bottom: 10px;
+        flex-direction: column;
+        align-items: center;
         text-align: center;
     }
 
-    .categoria .item img {
-        width: 100%;
-        height: auto;
+    .redes-sociais {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
-}
 
-#whatsapp-btn img {
-    width: 40px;
+    .redes-sociais a {
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 10px;
+    }
+
+    /* Estilos para telas maiores (desktop) */
+    .categoria .item {
+        display: block;
+        margin-left: 20px;
+        width: 200px; /* Largura fixa para cada item no desktop */
+        text-align: center; /* Centraliza o conteúdo de cada item */
+        margin-bottom: 20px; /* Espaçamento abaixo de cada item */
+        background-color: #f2f2f2; /* Cor de fundo */
+        border-radius: 8px; /* Bordas arredondadas */
+        padding: 10px; /* Espaçamento interno dos itens */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar um efeito de elevação */
+    }
+
+    .categoria .item img {
+        width: 150px; /* Largura fixa no desktop */
+        height: 150px; /* Altura fixa no desktop */
+        object-fit: cover; /* Garante que a imagem seja bem ajustada no container */
+        border-radius: 8px; /* Bordas arredondadas nas imagens */
+        display: block; /* Para que o margin auto funcione */
+        margin: 0 auto;
+    }
+
+    /* Estilos para dispositivos móveis */
+    @media (max-width: 768px) {
+        .categoria {
+            display: flex;
+            flex-wrap: wrap; /* Permite quebra de linha */
+            justify-content: space-between;
+        }
+
+        .categoria .item {
+            flex: 1 1 30%; /* Ajusta a largura dos itens para 30% */
+            margin: 5px; /* Espaçamento entre os itens */
+            max-width: 30%; /* Garante que os itens não excedam 30% */
+            box-sizing: border-box; /* Inclui padding e bordas na largura total */
+        }
+
+        .categoria .item img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    #whatsapp-btn img {
+        width: 40px;
+    }
 }
 
 header {
