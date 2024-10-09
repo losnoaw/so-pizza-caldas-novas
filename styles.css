@@ -10,7 +10,7 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        text-align: center;
+        /* text-align: center; */
     }
 
     .redes-sociais {
@@ -34,9 +34,10 @@ body {
     }
 
     .categoria .item {
-        width: 100%; /* Ajusta a largura para ocupar toda a tela no celular */
+        width: 45%; /* Ajusta a largura dos itens */
         margin-left: 0;
-        text-align: center;
+        margin-bottom: 10px;
+        text-align: ;
     }
 
     .categoria .item img {
