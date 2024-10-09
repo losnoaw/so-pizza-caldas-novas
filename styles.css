@@ -139,13 +139,14 @@ section {
     border: 1px solid #ccc;
     padding: 20px;
     background-color: #fff;
-    position: fixed; /* Faz o carrinho ficar fixo na tela */
-    bottom: 20px; /* Distância da parte inferior da tela */
-    left: 20px; /* Distância do lado esquerdo da tela */
-    width: 300px; /* Largura do carrinho */
-    z-index: 1000; /* Garante que o carrinho fique sobre outros elementos */
-    max-height: 50%; /* Limita a altura máxima */
-    overflow-y: auto; /* Adiciona barra de rolagem se o conteúdo for muito grande */
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 300px;
+    z-index: 1000;
+    max-height: 50%;
+    overflow-y: auto;
+    text-align: center;
 }
 
 #whatsapp-btn {
@@ -168,4 +169,33 @@ button {
 
 button:hover {
     background-color: #ff6347;
+}
+
+#toggle-carrinho-lateral {
+    position: fixed;
+    bottom: 50%;
+    left: 0;
+    transform: translateY(50%);
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    padding: 10px 20px;
+    z-index: 1002; /* Garante que o botão fique acima de outros elementos */
+}
+
+#toggle-carrinho-lateral:hover {
+    background-color: #e03e00;
+}
+
+#toggle-carrinho {
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
 }
