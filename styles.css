@@ -4,8 +4,51 @@ body {
     margin: 0;
     padding: 0;
 }
+
 @media (max-width: 768px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .redes-sociais {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .redes-sociais a {
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 10px;
+    }
+
+    .categoria,
+    img {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .categoria .item {
+        width: 100%; /* Ajusta a largura para ocupar toda a tela no celular */
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .categoria .item img {
+        width: 100%; /* Ajusta a largura da imagem para caber no container */
+        height: auto; /* Mantém a proporção da imagem */
+    }
+
+    #whatsapp-btn img {
+        width: 40px;
+    }
 }
+
 header {
     display: flex;
     justify-content: space-between;
@@ -29,7 +72,7 @@ header {
     margin-right: 0; /* Remove o espaçamento à direita do último link */
 }
 
-.redes-sociais :hover {
+.redes-sociais a:hover {
     color: rgb(20, 30, 177);
 }
 
