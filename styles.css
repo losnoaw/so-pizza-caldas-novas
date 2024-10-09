@@ -5,103 +5,97 @@ body {
     padding: 0;
 }
 
-header {
-    display: flex;
-    justify-content: space-between; /* Distribui espaço uniformemente entre os elementos */
-    align-items: center; /* Centraliza os itens verticalmente */
-    padding: 10px; /* Adiciona um pouco de padding */
-    background-color: #ff4500; /* Cor de fundo */
-    color: white; /* Cor do texto */
-    width: 100%; /* Garante que o header ocupe 100% da largura */
-    box-sizing: border-box; /* Inclui padding e bordas na largura total */
-}
-
-.redes-sociais {
-    display: flex;
-    gap: 15px; /* Espaçamento entre os links */
-}
-
-.redes-sociais a {
-    background-color: #ff4500; /* Cor de fundo dos botões */
-    color: white; /* Cor do texto */
-    padding: 10px 20px; /* Espaçamento interno dos botões */
-    text-decoration: none; /* Remove sublinhado */
-    border-radius: 5px; /* Bordas arredondadas */
-    margin: 0 10px; /* Espaçamento horizontal entre links */
-    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
-}
-
-.redes-sociais a:hover {
-    background-color: #e03e00; /* Cor ao passar o mouse */
-}
-
-section {
-    padding: 10px;
-}
-
-/* Estilos para dispositivos móveis */
-/* Estilos para dispositivos móveis */
 @media (max-width: 768px) {
-    .categoria {
+    header {
         display: flex;
-        flex-wrap: wrap; /* Permite quebra de linha */
-        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
+    .redes-sociais {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .redes-sociais a {
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 10px;
+    }
+
+    /* Estilos para dispositivos móveis */
     @media (max-width: 768px) {
-        header {
-            width: 100%; /* Ocupa 100% da largura da tela */
+        .categoria {
+            display: flex;
+            flex-wrap: wrap; /* Permite quebra de linha */
+            justify-content: space-between;
+        }
+
+        .categoria .item {
+            flex: 1 1 calc(10% - 10px); /* Ajusta a largura dos itens para 20% menos a margem */
+            margin: 5px; /* Espaçamento entre os itens */
+            max-width: calc(
+                20% - 10px
+            ); /* Garante que os itens não excedam 20% menos a margem */
+            box-sizing: border-box; /* Inclui padding e bordas na largura total */
+        }
+
+        .categoria .item img {
+            width: 100%; /* Ajusta a largura da imagem para caber no container */
+            height: auto; /* Mantém a proporção da imagem */
+            object-fit: cover; /* Garante que a imagem seja bem ajustada no container */
+        }
+    }
+    @media (max-width: 768px) {
+        .categoria .item {
+            display: block;
+            margin-left: 20px;
+            width: 200px; /* Largura fixa para cada item no desktop */
+            text-align: center; /* Centraliza o conteúdo de cada item */
+            margin-bottom: 20px; /* Espaçamento abaixo de cada item */
+            background-color: #f2f2f2; /* Cor de fundo */
+            border-radius: 8px; /* Bordas arredondadas */
+            padding: 10px; /* Espaçamento interno dos itens */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar um efeito de elevação */
+        }
+
+        .categoria .item img {
+            width: 150px; /* Largura fixa no desktop */
+            height: 150px; /* Altura fixa no desktop */
+            object-fit: cover; /* Garante que a imagem seja bem ajustada no container */
+            border-radius: 8px; /* Bordas arredondadas nas imagens */
+            display: block; /* Para que o margin auto funcione */
+            margin: 0 auto;
         }
     }
 
-    .categoria .item {
-        flex: 1 1 calc(25% - 10px); /* Ajusta a largura dos itens para 25% menos a margem */
-        margin: 5px; /* Espaçamento entre os itens */
-        max-width: calc(
-            25% - 10px
-        ); /* Garante que os itens não excedam 25% menos a margem */
-        box-sizing: border-box; /* Inclui padding e bordas na largura total */
+    /* Estilos para dispositivos móveis */
+    @media (max-width: 768px) {
+        .categoria {
+            display: flex;
+            flex-wrap: wrap; /* Permite quebra de linha */
+            justify-content: space-between;
+        }
+
+        .categoria .item {
+            flex: 1 1 30%; /* Ajusta a largura dos itens para 30% */
+            margin: 5px; /* Espaçamento entre os itens */
+            max-width: 30%; /* Garante que os itens não excedam 30% */
+            box-sizing: border-box; /* Inclui padding e bordas na largura total */
+        }
+
+        .categoria .item img {
+            width: 100%;
+            height: auto;
+        }
     }
 
-    .categoria .item img {
-        max-width: 100%; /* Garante que a imagem não exceda a largura do container */
-        height: auto; /* Mantém a proporção da imagem */
-        object-fit: cover; /* Garante que a imagem seja bem ajustada no container */
-        aspect-ratio: 1 / 1; /* Define uma proporção de 1:1 (quadrado) */
-    }
-}
-
-/* Estilos para telas menores */
-@media (max-width: 480px) {
-    .categoria .item {
-        flex: 1 1 calc(33.33% - 10px); /* Ajusta a largura dos itens para 33.33% menos a margem */
-        max-width: calc(
-            33.33% - 10px
-        ); /* Garante que os itens não excedam 33.33% menos a margem */
-    }
-
-    .categoria .item img {
-        max-width: 100%; /* Garante que a imagem ocupe toda a largura do container */
-        height: auto; /* Mantém a proporção da imagem */
-        object-fit: cover; /* Garante que a imagem seja bem ajustada no container */
-        aspect-ratio: 1 / 1; /* Define uma proporção de 1:1 (quadrado) */
-    }
-}
-
-/* Estilos para telas ainda menores */
-@media (max-width: 320px) {
-    .categoria .item {
-        flex: 1 1 calc(50% - 10px); /* Ajusta a largura dos itens para 50% menos a margem */
-        max-width: calc(
-            50% - 10px
-        ); /* Garante que os itens não excedam 50% menos a margem */
-    }
-
-    .categoria .item img {
-        max-width: 100%; /* Garante que a imagem ocupe toda a largura do container */
-        height: auto; /* Mantém a proporção da imagem */
-        object-fit: cover; /* Garante que a imagem seja bem ajustada no container */
-        aspect-ratio: 1 / 1; /* Define uma proporção de 1:1 (quadrado) */
+    #whatsapp-btn img {
+        width: 40px;
     }
 }
 
@@ -112,6 +106,24 @@ header {
     background-color: #ff4500;
     padding: 10px;
     color: white;
+}
+
+.redes-sociais {
+    color: #f2f2f2;
+}
+
+.redes-sociais a {
+    color: #f2f2f2;
+    text-decoration: none;
+    margin: 15px;
+}
+
+.redes-sociais a:last-child {
+    margin-right: 0;
+}
+
+.redes-sociais a:hover {
+    color: rgb(20, 30, 177);
 }
 
 section {
