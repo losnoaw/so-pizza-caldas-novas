@@ -48,6 +48,12 @@ section {
         justify-content: space-between;
     }
 
+    @media (max-width: 768px) {
+        header {
+            width: 100%; /* Ocupa 100% da largura da tela */
+        }
+    }
+
     .categoria .item {
         flex: 1 1 calc(25% - 10px); /* Ajusta a largura dos itens para 25% menos a margem */
         margin: 5px; /* Espaçamento entre os itens */
