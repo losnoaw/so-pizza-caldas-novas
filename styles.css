@@ -47,6 +47,8 @@ img {
 
 /* Estilo base para todos os itens */
 .categoria .item {
+    display: block;
+    margin-left: 20px;
     width: 200px; /* Largura fixa para cada item */
     text-align: center; /* Centraliza o conteúdo de cada item */
     margin-bottom: 20px; /* Espaçamento abaixo de cada item */
