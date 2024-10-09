@@ -36,18 +36,19 @@ body {
         }
 
         .categoria .item {
-            flex: 1 1 calc(20% - 10px); /* Ajusta a largura dos itens para 20% menos a margem */
+            flex: 1 1 calc(25% - 10px); /* Ajusta a largura dos itens para 25% menos a margem */
             margin: 5px; /* Espaçamento entre os itens */
             max-width: calc(
-                20% - 10px
-            ); /* Garante que os itens não excedam 20% menos a margem */
+                25% - 10px
+            ); /* Garante que os itens não excedam 25% menos a margem */
             box-sizing: border-box; /* Inclui padding e bordas na largura total */
         }
 
         .categoria .item img {
-            width: 10vw; /* Usa 20% da largura da viewport */
+            max-width: 100%; /* Garante que a imagem não exceda a largura do container */
             height: auto; /* Mantém a proporção da imagem */
             object-fit: cover; /* Garante que a imagem seja bem ajustada no container */
+            aspect-ratio: 1 / 1; /* Define uma proporção de 1:1 (quadrado) */
         }
     }
 
@@ -61,28 +62,27 @@ body {
         }
 
         .categoria .item img {
-            width: 20vw; /* Usa 30% da largura da viewport */
+            max-width: 100%; /* Garante que a imagem ocupe toda a largura do container */
+            height: auto; /* Mantém a proporção da imagem */
+            object-fit: cover; /* Garante que a imagem seja bem ajustada no container */
+            aspect-ratio: 1 / 1; /* Define uma proporção de 1:1 (quadrado) */
         }
     }
 
-    /* Estilos para dispositivos móveis */
-    @media (max-width: 768px) {
-        .categoria {
-            display: flex;
-            flex-wrap: wrap; /* Permite quebra de linha */
-            justify-content: space-between;
-        }
-
+    /* Estilos para telas ainda menores */
+    @media (max-width: 320px) {
         .categoria .item {
-            flex: 1 1 30%; /* Ajusta a largura dos itens para 30% */
-            margin: 5px; /* Espaçamento entre os itens */
-            max-width: 30%; /* Garante que os itens não excedam 30% */
-            box-sizing: border-box; /* Inclui padding e bordas na largura total */
+            flex: 1 1 calc(50% - 10px); /* Ajusta a largura dos itens para 50% menos a margem */
+            max-width: calc(
+                50% - 10px
+            ); /* Garante que os itens não excedam 50% menos a margem */
         }
 
         .categoria .item img {
-            width: 100%;
-            height: auto;
+            max-width: 100%; /* Garante que a imagem ocupe toda a largura do container */
+            height: auto; /* Mantém a proporção da imagem */
+            object-fit: cover; /* Garante que a imagem seja bem ajustada no container */
+            aspect-ratio: 1 / 1; /* Define uma proporção de 1:1 (quadrado) */
         }
     }
 
