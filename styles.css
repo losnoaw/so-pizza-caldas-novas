@@ -139,6 +139,13 @@ section {
     border: 1px solid #ccc;
     padding: 20px;
     background-color: #fff;
+    position: fixed; /* Faz o carrinho ficar fixo na tela */
+    bottom: 20px; /* Distância da parte inferior da tela */
+    left: 20px; /* Distância do lado esquerdo da tela */
+    width: 300px; /* Largura do carrinho */
+    z-index: 1000; /* Garante que o carrinho fique sobre outros elementos */
+    max-height: 50%; /* Limita a altura máxima */
+    overflow-y: auto; /* Adiciona barra de rolagem se o conteúdo for muito grande */
 }
 
 #whatsapp-btn {
