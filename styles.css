@@ -206,14 +206,16 @@ button:hover {
         justify-content: space-between;
     }
 
-    .categoria .item .pizza-item {
+    .categoria .item,
+    .pizza-item {
         flex: 1 1 25%; /* Ajusta a largura dos itens para 30% */
         margin: 5px; /* Espaçamento entre os itens */
         max-width: 30%; /* Garante que os itens não excedam 30% */
         box-sizing: border-box; /* Inclui padding e bordas na largura total */
     }
 
-    .categoria .item .pizza-item img {
+    .categoria .item img,
+    .pizza-item img {
         width: 100%;
         height: auto;
         object-fit: cover; /* Garante que a imagem seja bem ajustada no container */
@@ -221,6 +223,12 @@ button:hover {
 
     #whatsapp-btn img {
         width: 40px;
+    }
+
+    /* Ajuste de tamanho dos botões para dispositivos menores */
+    button {
+        padding: 8px; /* Reduz o padding nos botões */
+        font-size: 14px; /* Reduz o tamanho da fonte dos botões */
     }
 }
 
@@ -231,5 +239,11 @@ button:hover {
         width: calc(
             50% - 10px
         ); /* Em dispositivos menores, 2 itens por linha */
+    }
+
+    /* Ajuste de tamanho dos botões para dispositivos ainda menores */
+    button {
+        padding: 6px; /* Reduz ainda mais o padding nos botões */
+        font-size: 12px; /* Reduz o tamanho da fonte dos botões */
     }
 }
