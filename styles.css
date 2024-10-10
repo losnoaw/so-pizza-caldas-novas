@@ -207,7 +207,7 @@ button:hover {
     }
 
     .categoria .item .pizza-item {
-        flex: 1 1 25%; /* Ajusta a largura dos itens para 30% */
+        flex: 1 1 30%; /* Ajusta a largura dos itens para 30% */
         margin: 5px; /* Espaçamento entre os itens */
         max-width: 30%; /* Garante que os itens não excedam 30% */
         box-sizing: border-box; /* Inclui padding e bordas na largura total */
