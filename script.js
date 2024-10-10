@@ -78,12 +78,37 @@ const itensCardapio = {
             preco: 30,
             imagem: "pizza-sabores/pizza1.jpeg",
         },
+        {
+            nome: "Pizza Margherita",
+            preco: 30,
+            imagem: "pizza-sabores/pizza1.jpeg",
+        },
+        {
+            nome: "Pizza Margherita",
+            preco: 30,
+            imagem: "pizza-sabores/pizza1.jpeg",
+        },
+        {
+            nome: "Pizza Margherita",
+            preco: 30,
+            imagem: "pizza-sabores/pizza1.jpeg",
+        },
     ],
     refrigerantes: [
         {
-            nome: "Coca-Cola",
-            preco: 10,
-            imagem: "Refrigerantes/coca-cola2l.png",
+            nome: "Guaraná",
+            preco: 4.5,
+            imagem: "Refrigerantes/guaraná-Antarctica-2l.png",
+        },
+        {
+            nome: "Guaraná",
+            preco: 4.5,
+            imagem: "Refrigerantes/guaraná-Antarctica-2l.png",
+        },
+        {
+            nome: "Guaraná",
+            preco: 4.5,
+            imagem: "Refrigerantes/guaraná-Antarctica-2l.png",
         },
         {
             nome: "Guaraná",
@@ -92,8 +117,8 @@ const itensCardapio = {
         },
     ],
     sucos: [
-        { nome: "Suco de Laranja", preco: 6, imagem: "Sucos/laranja.png" },
-        { nome: "Suco de Uva", preco: 6.5, imagem: "Sucos/laranja.png" },
+        /* { nome: "Suco de Laranja", preco: 6, imagem: "Sucos/laranja.png" },
+        { nome: "Suco de Uva", preco: 6.5, imagem: "Sucos/laranja.png" }, */
     ],
 };
 
