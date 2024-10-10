@@ -47,6 +47,38 @@ const itensCardapio = {
             imagem: "pizza-sabores/pizza1.jpeg",
         },
     ],
+    pizzas2Sabores: [
+        {
+            nome: "Pizza Margherita",
+            preco: 30,
+            imagem: "pizza-sabores/pizza1.jpeg",
+        },
+        {
+            nome: "Pizza Margherita",
+            preco: 30,
+            imagem: "pizza-sabores/pizza1.jpeg",
+        },
+        {
+            nome: "Pizza Margherita",
+            preco: 30,
+            imagem: "pizza-sabores/pizza1.jpeg",
+        },
+        {
+            nome: "Pizza Margherita",
+            preco: 30,
+            imagem: "pizza-sabores/pizza1.jpeg",
+        },
+        {
+            nome: "Pizza Margherita",
+            preco: 30,
+            imagem: "pizza-sabores/pizza1.jpeg",
+        },
+        {
+            nome: "Pizza Margherita",
+            preco: 30,
+            imagem: "pizza-sabores/pizza1.jpeg",
+        },
+    ],
     refrigerantes: [
         {
             nome: "Coca-Cola",
@@ -78,6 +110,8 @@ function adicionarItens(categoria, itens) {
         const img = document.createElement("img");
         img.src = item.imagem;
         img.alt = item.nome;
+        /* img.style.width = "100px"; // Ajuste de tamanho (opcional)
+        img.style.height = "auto"; // Ajuste de tamanho (opcional) */
 
         // Cria um título com o nome do item
         const titulo = document.createElement("h4");
@@ -108,6 +142,81 @@ function carregarCardapio() {
     adicionarItens("pizzas", itensCardapio.pizzas);
     adicionarItens("refrigerantes", itensCardapio.refrigerantes);
     adicionarItens("sucos", itensCardapio.sucos);
+
+    adicionarItensPizzas2Sabores();
+}
+
+// Função para adicionar Pizzas de Dois Sabore
+function adicionarItensPizzas2Sabores() {
+    const pizzas2SaboresDiv = document.getElementById("pizzas2Sabores");
+    const maxSabores = 2;
+    let saboresSelecionados = [];
+
+    // Usando o array pizzas2Sabores
+    itensCardapio.pizzas2Sabores.forEach((pizza, index) => {
+        const div = document.createElement("div");
+        div.classList.add("pizza-item");
+
+        // Criando imagem
+        const img = document.createElement("img");
+        img.src = pizza.imagem;
+        img.alt = pizza.nome;
+        /* img.style.width = "100px"; // Ajuste de tamanho (opcional)
+        img.style.height = "auto"; // Ajuste de tamanho (opcional) */
+
+        const checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        checkbox.id = `pizza2Sabor${index}`;
+        checkbox.name = `pizza2Sabor${index}`;
+        checkbox.value = pizza.nome;
+        checkbox.dataset.preco = pizza.preco;
+
+        const label = document.createElement("label");
+        label.htmlFor = `pizza2Sabor${index}`;
+        label.textContent = `${pizza.nome} - R$${pizza.preco.toFixed(2)}`;
+
+        // Adicionando elementos ao div
+        div.appendChild(img);
+        div.appendChild(checkbox);
+        div.appendChild(label);
+        pizzas2SaboresDiv.appendChild(div);
+
+        // Controle de seleção de sabores
+        checkbox.addEventListener("change", function () {
+            if (this.checked) {
+                if (saboresSelecionados.length < maxSabores) {
+                    saboresSelecionados.push(this);
+                } else {
+                    this.checked = false;
+                    alert("Você só pode selecionar no máximo dois sabores.");
+                }
+            } else {
+                const index = saboresSelecionados.indexOf(this);
+                if (index > -1) {
+                    saboresSelecionados.splice(index, 1);
+                }
+            }
+        });
+    });
+
+    const botao = document.createElement("button");
+    botao.textContent = "Adicionar ao Carrinho";
+    botao.onclick = function () {
+        let totalPreco = 0;
+        saboresSelecionados.forEach((checkbox) => {
+            totalPreco += parseFloat(checkbox.dataset.preco);
+        });
+
+        const nomePizza = saboresSelecionados
+            .map((checkbox) => checkbox.value)
+            .join(" e ");
+        adicionarAoCarrinho(nomePizza, totalPreco);
+
+        saboresSelecionados.length = 0;
+        const checkboxes = document.querySelectorAll(".pizza-item input");
+        checkboxes.forEach((checkbox) => (checkbox.checked = false));
+    };
+    pizzas2SaboresDiv.appendChild(botao);
 }
 
 let carrinho = [];

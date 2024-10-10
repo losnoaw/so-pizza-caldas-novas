@@ -40,53 +40,50 @@ section {
 .categoria {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     gap: 20px;
-    justify-content: center;
 }
 
-/* Estilo base para todos os itens */
-.categoria .item {
-    display: block;
-    margin-left: 20px;
-    width: 200px;
+/* Itens dentro da categoria com tamanhos padrão */
+.categoria .item,
+.pizza-item {
+    width: calc(25% - 10px); /* Cada item ocupa 1/3 do espaço menos a margem */
     text-align: center;
-    margin-bottom: 20px;
     background-color: #f2f2f2;
     border-radius: 8px;
     padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilo para todas as imagens */
-.categoria .item img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
+/* Imagens com tamanho padrão */
+.categoria .item img,
+.pizza-item img {
+    width: 100%; /* Preenche a largura do item */
+    height: auto;
+    object-fit: cover; /* Ajusta as imagens sem distorção */
     border-radius: 8px;
-    display: block;
-    margin: 0 auto;
 }
 
 /* Estilo para os títulos dos itens */
-.categoria .item h4 {
+.categoria .item h4,
+.pizza-item h4 {
     color: #333;
     font-size: 18px;
     margin-top: 10px;
 }
 
-/* Estilo para os botões */
-.categoria .item button {
+/* Estilo base para botões */
+button {
     background-color: #ff4500;
     color: white;
     border: none;
-    padding: 8px 12px;
-    border-radius: 50px;
+    padding: 10px;
     cursor: pointer;
-    margin-top: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-/* Efeito hover nos botões */
-.categoria .item button:hover {
+button:hover {
     background-color: #e03e00;
 }
 
@@ -113,18 +110,6 @@ section {
 
 #whatsapp-btn img {
     width: 50px;
-}
-
-button {
-    background-color: #ff4500;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #ff6347;
 }
 
 #toggle-carrinho-lateral {
@@ -164,7 +149,7 @@ button:hover {
 #toggle-carrinho {
     margin-bottom: 10px;
     padding: 10px 20px;
-    background-color: #ff4500;
+    background-color: #ff4500; /* Cor de fundo vermelho */
     color: white;
     border: none;
     cursor: pointer;
@@ -192,6 +177,7 @@ button:hover {
     background-color: #e03e00; /* Cor ao passar o mouse */
 }
 
+/* Ajuste para dispositivos móveis */
 @media (max-width: 768px) {
     header {
         display: flex;
@@ -214,74 +200,36 @@ button:hover {
         padding: 10px;
     }
 
-    /* Estilos para dispositivos móveis */
-    @media (max-width: 768px) {
-        .categoria {
-            display: flex;
-            flex-wrap: wrap; /* Permite quebra de linha */
-            justify-content: space-between;
-        }
-
-        .categoria .item {
-            flex: 1 1 calc(10% - 10px); /* Ajusta a largura dos itens para 20% menos a margem */
-            margin: 5px; /* Espaçamento entre os itens */
-            max-width: calc(
-                20% - 10px
-            ); /* Garante que os itens não excedam 20% menos a margem */
-            box-sizing: border-box; /* Inclui padding e bordas na largura total */
-        }
-
-        .categoria .item img {
-            width: 100%; /* Ajusta a largura da imagem para caber no container */
-            height: auto; /* Mantém a proporção da imagem */
-            object-fit: cover; /* Garante que a imagem seja bem ajustada no container */
-        }
-    }
-    @media (max-width: 768px) {
-        .categoria .item {
-            display: block;
-            margin-left: 20px;
-            width: 200px; /* Largura fixa para cada item no desktop */
-            text-align: center; /* Centraliza o conteúdo de cada item */
-            margin-bottom: 20px; /* Espaçamento abaixo de cada item */
-            background-color: #f2f2f2; /* Cor de fundo */
-            border-radius: 8px; /* Bordas arredondadas */
-            padding: 10px; /* Espaçamento interno dos itens */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar um efeito de elevação */
-        }
-
-        .categoria .item img {
-            width: 150px; /* Largura fixa no desktop */
-            height: 150px; /* Altura fixa no desktop */
-            object-fit: cover; /* Garante que a imagem seja bem ajustada no container */
-            border-radius: 8px; /* Bordas arredondadas nas imagens */
-            display: block; /* Para que o margin auto funcione */
-            margin: 0 auto;
-        }
+    .categoria {
+        display: flex;
+        flex-wrap: wrap; /* Permite quebra de linha */
+        justify-content: space-between;
     }
 
-    /* Estilos para dispositivos móveis */
-    @media (max-width: 768px) {
-        .categoria {
-            display: flex;
-            flex-wrap: wrap; /* Permite quebra de linha */
-            justify-content: space-between;
-        }
+    .categoria .item {
+        flex: 1 1 25%; /* Ajusta a largura dos itens para 30% */
+        margin: 5px; /* Espaçamento entre os itens */
+        max-width: 30%; /* Garante que os itens não excedam 30% */
+        box-sizing: border-box; /* Inclui padding e bordas na largura total */
+    }
 
-        .categoria .item {
-            flex: 1 1 30%; /* Ajusta a largura dos itens para 30% */
-            margin: 5px; /* Espaçamento entre os itens */
-            max-width: 30%; /* Garante que os itens não excedam 30% */
-            box-sizing: border-box; /* Inclui padding e bordas na largura total */
-        }
-
-        .categoria .item img {
-            width: 100%;
-            height: auto;
-        }
+    .categoria .item img {
+        width: 100%;
+        height: auto;
+        object-fit: cover; /* Garante que a imagem seja bem ajustada no container */
     }
 
     #whatsapp-btn img {
         width: 40px;
+    }
+}
+
+/* Ajuste adicional para dispositivos menores */
+@media (max-width: 480px) {
+    .categoria .item,
+    .pizza-item {
+        width: calc(
+            50% - 10px
+        ); /* Em dispositivos menores, 2 itens por linha */
     }
 }
